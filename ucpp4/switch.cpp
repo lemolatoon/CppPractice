@@ -3,9 +3,10 @@
 int main() {
 	int hand;
 
-
+	do {
 	std::cout << "手を選んでね (0:グー 1:チョキ 2:パー)" << std::endl;
 	std::cin >> hand;
+	} while (hand < 0 || 2 <  hand);
 
 	/*
 	if(hand == 0) {
@@ -21,8 +22,10 @@ int main() {
 	switch (hand) {
 	case 0:
 		std::cout << "グー" << std::endl;
+		break;
 	case 1:
 		std::cout << "チョキ" << std::endl;
+		break;
 	case 2:
 		std::cout << "パー" << std::endl;
 		break;
