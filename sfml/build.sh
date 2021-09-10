@@ -1,5 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
-g++ -c main.cpp
+echo $1
+# $filename = $1
+# echo $filename
 
-g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
+#$ARR=(${filename//,/ })
+
+#echo $ARR[0]
+
+g++ -c $1
+
+COMPILED=${1/.cpp/.o}
+
+echo $COMPILED
+
+g++ $COMPILED -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
